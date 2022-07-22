@@ -1,0 +1,109 @@
+body
+{
+    font-family: Arial, sans-serif;
+    background-color: #c980f3;
+    color: #000000;
+}
+h2
+{
+    text-align: center;
+}
+div#menul
+{
+    position: absolute;
+    width: 130px;
+    background-color: #593e68;
+    color: #dddddd;
+    margin: 200px auto 0px 0px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+div#interface
+{
+    width: 1600px;
+    height: 13500px;
+    background-color: #dac9e4;
+    margin: -20px auto 0px 160px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+aside#centro {
+    position: absolute;
+    margin-left: 600px;
+    display: block;
+    width: 500px;
+    height: 13325px;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-color: #dac9e4;
+    text-align: center;
+    border-right: 1px solid #606060;
+}
+aside#esquerda {
+    position: absolute;
+    margin-left: 1150px;
+    display: block;
+    width: 400px;
+    height: 13325px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #dac9e4;
+    text-align: center;
+}
+nav#menu
+{
+    display: block;
+}
+nav#menu ul
+{
+    list-style: none;
+    text-transform: uppercase;
+    /* position: absolute; */
+}
+nav#menu li
+{
+    display: inline-block;
+    background-color: #f3f7f5;
+    padding: 10px;
+    margin: 2px;
+    transition: background-color 1s;
+}
+nav#menu li:hover
+{
+    background-color: #35463e;
+}
+p
+{
+    text-align: justify;
+}
+header#cabecalho {
+    border-bottom: 1px #606060 solid;
+    height: 150px;
+    text-align: center;
+}
+header#cabecalho h1 {
+    font-family: Arial, sans-serif;
+    font-size: 30pt;
+    color: #000000;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    margin-bottom: 0px;
+}
+header#cabecalho h2 {
+    font-family: Arial, sans-serif;
+    color: #000000;
+    font-size: 15pt;
+    padding: 0px;
+    margin-top: 0px;
+}
+section#corpo
+{
+    display: block;
+    width: 575px;
+    height: 13305px;
+    float: none;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-right: 1px solid #606060;
+}
+
+

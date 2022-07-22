@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo HTML</title>
+    <link rel="stylesheet" type="text/css" href="style.css"> <!-- Link para arquivo .css-->
+</head>
+<body>
+    <div id="menul">
+        <h2>Aqui fica o menu lateral</h2>
+        <ul>
+            <li>item</li>
+            <li>item</li>
+            <li>item</li>
+            <li>item</li>
+            <li>item</li>
+            <li>item</li>
+            <li>item</li>
+            <li>item</li>
+        </ul>
+    </div>
+    <!--As tags são semanticas e para cada uma delas temos um significado diferente-->
+    <div id="interface">
+        <header id="cabecalho">
+            <hgroup>
+                <h1>Aprendendo HTML</h1>
+            </hgroup>
+            <nav id="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="html.html">HTML</a></li>
+                    <li><a href="css.html">CSS</a></li>
+                    <li><a href="js.html">JavaScript</a></li>
+                    <li><a href="shellscript.html">Shell Script</a></li>
+                    <li><a href="vscode.html">Dicas VSCode</a></li>
+                    <li><a href="tutoriais.html">Tutoriais em video</a></li>
+                </ul>
+            </nav>
+        </header>
+        <aside id="centro">
+            <h2>Biblioteca</h2>
+            <a href="https://github.com/free-educa/books/blob/main/books/Codigo%20Limpo%20-%20Completo%20PT.pdf" target="_blank"><img src="_imagemhtml/codigo limpo.png" alt=""></a>
+            <a href="_livros/Padroes_de_Projetos_Solucoes_Reutilizave.pdf" target="_blank"><img src="_imagemhtml/padroesdeobjeto.png" alt=""></a>
+            <a href="https://github.com/free-educa/others-programming-books/blob/master/O%20Programador%20Apaixonado%20-%20Construindo%20uma%20carreira%20notavel%20em%20desenvolvimento%20de%20software%20-%20Casa%20do%20Codigo.pdf" target="_blank"><img src="_imagemhtml/oprogapaixonado.png" alt=""></a>
+        </aside>
+        <aside id="esquerda">
+            <h2>Comandos via terminal</h2>
+            <h3>Atalhos Globais</h3>
+            <p><b>Ctrl+C</b> - cancela o comando atual em funcionamento.</p>
+            <p><b>Ctrl+Z</b> - para o comando atual, retorba com fg em primeiro plano Linux ou bg em segundo plano.</p>
+            <p><b>Ctrl+D</b> - faz logout da sessão atual, similar ao comando exit.</p>
+            <p><b>Ctrl+W</b> - apaga uma palavra na linha atual.</p>
+            <p><b>Ctrl+U</b> - apaga a linha inteira.</p>
+            <p><b>Ctrl+R</b> - tecle para mostrar um comando recente.</p>
+            <p><b>!!</b> - repede o ultimo comando.</p>
+            <h3>Lista dos comandos mais comuns</h3>
+            <p><b>Exit</b> - faz logout da sessão atual.</p>
+            <p><b>ls</b> - lista diretórios.</p>
+            <p><b>ls -all</b> - lista diretórios mostrando arquivos ocultos.</p>
+            <p><b>cd dir</b> - muda do diretório atual para o especificado (substituir a variavel <em>dir</em> pelo nome da pasta.</p>
+            <p><b>cd</b> - muda para o diretório /home (arquivos pessoais).</p>
+            <p><b>pwd</b> - mostra o caminho do diretório atual.</p>
+            <p><b>mkdir *dir</b> - criar um diretório especificado (substituir variavel <em>dir</em> pelo nome da pasta.</p>
+            <p><b>rm *arq</b> - apaga o arquivo especificado (substituir variavel <em>arq</em> pelo nome do arquivo que quer excluir.</p>
+            <p><b>rm -r dir</b> - apaga o diretório especificado (substituir variável dir pelo nome da pasta.</p>
+            <p><b>rm -f arq</b> - apaga arquivo especificado forçadamente (-f de force) (substituir a variável arq pelo nome do arquivo que quer excluir.</p>
+            <p><b>rn -rf dir</b> - apaga o diretório especificado forçadamente (substituir a variável dir pelo nome da pasta). Utilize esse comando com extrema atenção.</p>
+            <p><b>cp -r arq1 arq2</b> - copia o "arquivo1" para o "arquivo2" (substituir a variável arq* pelo nome do arquivo).</p>
+            <p><b>cp -r dir1 dir2</b> - copia do "diretório1" para o "diretório2";  cria o "diretório2" caso não exista (substituir a variável dir* pelo nome do diretório).</p>
+            <p><b>mv arq1 arq2</b> - dupla função: pode ser usado para renomear ou mover "arquivo1" para "arquivo2". Se "arquivo2" for um diretório existente, move "arquivo1" para dentro do diretório "arquivo2" (substituir a variável arq pelo nome do arquivo).</p>
+            <p><b>ln -s arq link</b> - cria um link simbólico "link" (atalho) para "arquivo" (substituir a variável arq pelo nome do arquivo e link pelo nome que terá o atalho.</p>
+            <p><b>touch arq</b> - cria ou atualiza o "arquivo" (substituir a variável arq pelo nome do arquivo).</p>
+            <p><b>cat>arq</b> - direciona a entrada padrão para um arquivo (substituir a variável arq pelo nome do arquivo.</p>
+            <p><b>more arq</b> - mostra o conteúdo de um arquivo (substituir a variavel arq pelo nome do arquivo).</p>
+            <p><b>head arq</b> - mostra as primeiras 10 linhas de um arquivo (substituir a variável arq pelo nome do arquivo).</p>
+            <p><b>tail arq</b> - mostra as ultimas 10 linhas de um arquivo (substituir a variavel arq pelo nome do arquivo).</p>
+            <p><b>tail -f arq</b> - mostra o conteudo de um arquivo enquanto ele é atualizado (aumenta de tamanho), iniciando com as ultimas 10 linhas (substituir a variavel arq pelo nome do arquivo).</p>
+            <p><b>ps</b> - mostra os processos de usuario ativos em tempo real.</p>
+            <p><b>top</b> - mostra todos os processos rodando em tempo real.</p>
+            <p><b>kill pid</b> - mata um processo especifico pelo numero do ID (substituir pid pelo numero do processo).</p>
+            <p><b>killall proc</b> mata todos os processos com o nome especificado (proc, de processos) (substituir proc pelo nome do processo).</p>
+            <p><b>bg</b> - lista trabalhos parados ou em segundo plano ou pode continua-los também.</p>
+            <p><b>fg</b> - traz o trabalho mais recente para o primeiro plano.</p>
+            <p><b>fg trab</b> - traz o trabalho "trab" para o primeiro plano (substituir trab pelo nome do processo).</p>
+            <p><b>chmod octal arq</b> - muda as permissões do arquivo "arq" para octal, que pode ser especificada separadamente para "usuário", "grupo" e "outros". Os valores em octal são representados abaixo:</p>
+            <ul>
+                <li>4 - leitura (r, de read)</li>
+                <li>2 - gravação (w, de write)</li>
+                <li>1 - execução (x, de execute)</li>
+            </ul>
+            <p>Explanação: Para de finir permissões, somam-se os valores acima. Por exemplo, para atribuir ao dono do arquivo ("usuário") acesso total de leitura (r), gravação (w) e execução (x), basta somar o valor octal 4 + 2 + 1 = 7. SUpondo que você queira limitar o acesso para membros do "grupo", permitindo apenas a leitura e gravação, basta somar  4 + 2 = 6. Reunindo os dois exemplos citados, ficaria: chmod 760 (r para usuario, w para grupo e 0 para outros ou "rw-".</p>
+            <h3>Outros exemplos</h3>
+            <ul>
+                <li><b>chmod 777:</b> leitura (r), gravação (w) e execução (x) para todos ("usuário", "grupo" e "outros")</li>
+                <li><b>chmod 755:</b> "rwx" para o "dono" (usuário"), "rw" para o "grupo" e "outros"</li>
+                <q>Para mais informações, digite no terminal: <b>man chmod</b></q>
+            </ul>
+            <p><b>ssh usuário@host:</b> - conecta ao host como usuário (exemplo: ssh computeiro@meuservidor).</p>
+            <p><b>ssh -p porta usuário@host:</b> - conecta ao host na porta especificada (substituir "porta" pelo numero da porta configurada).</p>
+            <p><b>ssh-copy-id usuário@host</b> - adiciona sua chave para o host e usuário daquele host; serve para ativar logins sem senha com uso de chaves.</p>
+            <p><b>grep sequência arquivos</b> - pesquisa pela sequência nos arquivos (substituir a sequência e arquivos pelos valores correspondentes à pesquisa.</p>
+            <p><b>grep -r sequência dir</b> - pesquisa recursivamente pel sequeência no diretório dir.</p>
+            <p><b>comando|grep sequência</b> pesquisa pela sequência na saída do comando (substituir comando e sequência de acordo com os valores a serem buscados).</p>
+            <p><b>locate arq</b> - encontra todas as instâncias de um arquivo (substituir a variável arq pelo nome do arquivo.</p>
+            <p><b>date</b> - mostra a data e hora atual.</p>
+            <p><b>cal</b> - mostra um calendário do mês atual.</p>
+            <p><b>uptime</b> - mostra o tempo de atividade do sistema.</p>
+            <p><b>w</b> - mostra quem está online.</p>
+            <p><b>whoami</b> - mostra como quem você esta logado.</p>
+            <p><b>finger</b> - usuário mostra informações do usuário.</p>
+            <p><b>uname -a</b> - mostra informações do kernels.</p>
+            <p><b>cat /proc/cpuinfo</b> - mostra informações  da CPU.</p>
+            <p><b>cat /proc/meminfo</b> - mostra as informações da memória.</p>
+            <p><b>man comando</b> - abre o manual do comando especificado (substituir a variável comando pelo nome do comando que se quer conhecer).</p>
+            <p><b>df</b> - mostra o uso do disco.</p>
+            <p><b>du</b> - mostra o uso do espaço em um diretório.</p>
+            <p><b>free</b> - mostra o uso da memória swap.</p>
+            <p><b>whereis aplicação</b> - mostra possíveis localizações do aplicativo (substituir "aplicação" pelo nome do programa).</p>
+            <p><b>which aplicação</b> - mostra que aplicação irá rodar por omissão (substituir "aplicação" pelo nome do programa).</p>
+            <p><b>tar cf tar arqs</b> - cria um pacote TAR (nomeado pacote.tar) com os arquivosespecificados (substituir a variável arqs pelo nome dos arquivos).</p>
+            <p><b>tar xf tar</b> - extrai os arquivos de "pacote.tar" (substituir a variável pacote.tar pelo nome do arquivo).</p>
+            <p><b>tar czf tar.gz arqs</b> - cria um pacote TAR (nomeado pacote.tar.gz) com compressão GZip.</p>
+            <p><b>tar xzf tar.gz</b> - extrai um pacote TAR (nomeado pacote.tar.gz) com compressão GZip.</p>
+            <p><b>tar cjf tar.bz2</b> - cria um pacote TAR (nomeado pacote.tar.bz2) com compressão BZip2.</p>
+            <p><b>xjf tar.bz2</b> - extrai um pacote TAR (nomeado pacote.tar.bz2) com compressão BZip2</p>
+            <p><b>gzip arq</b> - compacta um arquivo e o renomeia para arq.gz (substituir a variável arq pelo nome do arquivo).</p>
+            <p><b>gzip -d gz</b> - descompacta arq.gz para um arquivo (substituir a variável arq.gz pelo nome do arquivo.</p>
+            <p><b>ping host</b> - envia um pacote ICMP (ping) para o hoste mostra o resultado (substituir a variávelhost pelo dominio de um site ou o número de IP)</p>
+            <p><b>whois domínio</b> - retorna informações sobre o domínio (substituir a variável domínio de um site ou o número IP.</p>
+            <p><b>dig domínio</b> - retorna informações DNS para o domínio (substituir a variável host pelo domínio de um site ou o número IP).</p>
+            <p><b>dig -x host</b> - mostra o retorno reverso para um host (substituir a variável host pelo domínio de um site ou o número IP).</p>
+            <p><b>wget arq</b> - faz o download de arquivo (arq) (substituir a variável arq pelo endereço online do arquivo).</p>
+            <p><b>wget -c arq</b> - continua o download interrompido de um arquivo (arq) (substituir a variável arq pelo endereço online de um arquivo).</p>
+            <h4>Instalação a partir do códigofonte (source code); os comandos devem ser digitados na sequencia em um terminal, um de cada vez:</h4>
+            <p><b>./configure</b></p>
+            <p><b>make</b></p>
+            <p><b>make install</b></p>
+            <h3>Comandos de instaladores</h3>
+            <p><b>dpkg -i deb</b> - instala um pacote DEB (distros Debian) (substituir a variável pacote.deb pelo nome do pacote de programa).</p>
+            <p><b>rpm -Uvh rpm</b> - instala um pacote RPM (Distros que utilizam RPM) (substituir a variável "pacote.rpm" pelo nome do pacote de programa.</p>
+            <h2>Guia de Referência COmpleto:</h2>
+            <h3>COmandos Avançados do Terminal GNU/Linux</h3>
+            <h4>Informações do sistema Linux</h4>
+            <p><b>arch</b> - Mostre a arquitetura da máquina (1).</p>
+            <p><b>uname -m</b> - Mostre a arquitetura da maquina (2).</p>
+            <p><b>uname -r</b> - Mostre a versão do kernel usada.</p>
+            <p><b>dmidecode -q</b> - MOstre os componentes do sistema (hardware).</p>
+            <p><b>hdparm -i /dev/hda</b> - Mostra as caracteristicas de um disco rígido.</p>
+            <p><b>hdparm -tT /dev/sda</b> - Execute teste de leitura em um disco rígido.</p>
+            <p><b>cat /proc/cpuinfo</b> - Exibe as informações da CPU.</p>
+            <p><b>cat /proc/interrupts</b> - Mostre interrupções.</p>
+            <p><b>cat /proc/meminfo</b> - verificar a utilização da memória.</p>
+            <p><b>cat /proc/swaps:df -h</b> - Mostre o tamanho dos arquivos e deiretórios ordenados por tamanho.</p>
+            <p><b>ls -lSr |more</b> - Estimar o espaço usado pelo didretório 'dir1'.</p>
+            <p><b>du -sh dir1</b> - MOstre o tamanho dos arquivos e diretórios ordenados por tamanho.</p>
+            <p><b>du -sk * | sort -rn</b> - mostra o espaço usado por pacotes rpm instalados, organizado pelo tamanho (Fedora, Red Hat e outros).</p>
+            <p><b>rpm -q -a -qf'%10{SIZE}t%{NAME}n' | sort -k1,1n</b> - mostra o espaço usado por pacotes instalados, organizado pelo tamanho (Debian, Ubuntu e outros).</p>
+            <p><b>dpkg-query -W -f='${Installed-Size;10}t${Package}n' | sort -k1,1n</b> Mostre arquivos de swap.</p>
+            <p><b>cat /proc/version</b> - exibe a versão do kernel</p>
+            <p><b>cat /proc/net/dev</b> - mostra estatisticas e adaptadores de rede.</p>
+            <p><b>cat /proc/mounts</b> - mostra o sistema de arquivos montado.</p>
+            <p><b>lspci -tv</b> - exibe os dispositivos pci.</p>
+            <p><b>lsusb -tv</b> - mostra os dispositivos usb.</p>
+            <p><b>date</b> - mostra a data do sistema.</p>
+            cal 1990
+        </aside>
+        <section id="corpo">
+            <article>
+                <h2>O que é HTML</h2>
+                <p>HTML significa "HiperText Markup Language", ou, em português, "Linguagem de Marcação de Hipertexto, criado pelo britânico Tim Berners-Lee. HTML consiste em uma série de elementos, que você usa para incluir ou envolver diferentes partes do conteúdo para faze-lo aparecer de uma determinada maneira. As tags popdem criar um hiperlink de uma palavra ou imagem para outro lugar, podem colocar palavras em italico, podem aumentar ou diminuir a fonte e assim por diante. </p>
+            </article>
+        </section>
+    </div>
+</body>
+</html>

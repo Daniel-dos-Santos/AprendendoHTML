@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo HTML</title>
+    <link rel="stylesheet" type="text/css" href="style.css"> <!-- Link para arquivo .css-->
+</head>
+<body>
+    <div id="menul">
+        <h2>Aqui fica o menu lateral</h2>
+        <ul>
+            <li>item</li>
+            <li>item</li>
+            <li>item</li>
+            <li>item</li>
+            <li>item</li>
+            <li>item</li>
+            <li>item</li>
+            <li>item</li>
+        </ul>
+    </div>
+    <!--As tags são semanticas e para cada uma delas temos um significado diferente-->
+    <div id="interface">
+        <header id="cabecalho">
+            <hgroup>
+                <h1>Aprendendo HTML</h1>
+            </hgroup>
+            <nav id="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="html.html">HTML</a></li>
+                    <li><a href="css.html">CSS</a></li>
+                    <li><a href="js.html">JavaScript</a></li>
+                    <li><a href="shellscript.html">Shel Script</a></li>
+                    <li><a href="vscode.html">Dicas VSCode</a></li>
+                    <li><a href="tutoriais.html">Tutoriais em video</a></li>
+                </ul>
+            </nav>
+        </header>
+        <aside id="centro">
+            <h2>Biblioteca</h2>
+            <a href="https://github.com/free-educa/books/blob/main/books/Codigo%20Limpo%20-%20Completo%20PT.pdf" target="_blank"><img src="_imagemhtml/codigo limpo.png" alt=""></a>
+            <a href="_livros/Padroes_de_Projetos_Solucoes_Reutilizave.pdf" target="_blank"><img src="_imagemhtml/padroesdeobjeto.png" alt=""></a>
+            <a href="https://github.com/free-educa/others-programming-books/blob/master/O%20Programador%20Apaixonado%20-%20Construindo%20uma%20carreira%20notavel%20em%20desenvolvimento%20de%20software%20-%20Casa%20do%20Codigo.pdf" target="_blank"><img src="_imagemhtml/oprogapaixonado.png" alt=""></a>
+        </aside>
+        <aside id="esquerda">
+            <h2>Aqui se insere o menu lateral direito</h2>
+            <p>esse é um paragrafo</p>
+        </aside>
+        <section id="corpo">
+            <article>
+                <h2>O que é HTML</h2>
+                <p>HTML significa "HiperText Markup Language", ou, em português, "Linguagem de Marcação de Hipertexto, criado pelo britânico Tim Berners-Lee. HTML consiste em uma série de elementos, que você usa para incluir ou envolver diferentes partes do conteúdo para faze-lo aparecer de uma determinada maneira. As tags popdem criar um hiperlink de uma palavra ou imagem para outro lugar, podem colocar palavras em italico, podem aumentar ou diminuir a fonte e assim por diante. </p>
+            </article>
+        </section>
+    </div>
+</body>
+</html>
