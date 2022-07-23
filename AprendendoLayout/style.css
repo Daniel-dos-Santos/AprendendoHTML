@@ -1,0 +1,44 @@
+h1
+{
+    text-align: center;
+}
+header#topo
+{
+    background-color: rgb(247, 163, 53);
+}
+div#corpo
+{
+    position: relative;
+    background-color: rgb(240, 243, 243);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+}
+div#container
+{
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    min-height: 1400px;
+    margin: 50px;
+    display: grid;
+    border-radius: 3%;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px black;
+}
+aside#esquerda
+{
+    width: 750px;
+    position: relative;
+    background-color: rgb(245, 212, 170);
+    padding: 40px;
+    border-radius: 3% 0 0 3%;
+}
+section#principal
+{
+    position: relative;
+    background-color: rgb(178, 132, 221);
+    padding: 40px;
+    border-radius: 0 3% 3% 0;
+}
