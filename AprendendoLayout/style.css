@@ -13,8 +13,8 @@ nav#menu
 nav#menu li
 {
     display: inline-block;
-    color: aliceblue;
-    background-color: rgb(163, 128, 155);
+    color: rgb(226, 227, 228);
+    background-color: rgb(226, 226, 226);
     font-size: 25px;
     padding: 10px;
     margin: 2px;
@@ -23,7 +23,7 @@ nav#menu li
 }
 nav#menu li:hover
 {
-    background-color: rgb(104, 64, 95);
+    background-color: rgb(114, 114, 114);
 }
 div#corpo
 {
@@ -42,7 +42,7 @@ div#container
     min-height: 1400px;
     margin: 50px;
     display: grid;
-    border-radius: 3%;
+    border-radius: 1%;
     grid-template-columns: 1fr 2fr;
     box-shadow: 0 35px 55px black;
 }
@@ -52,14 +52,14 @@ aside#esquerda
     position: relative;
     background-color: rgb(245, 212, 170);
     padding: 40px;
-    border-radius: 3% 0 0 3%;
+    border-radius: 1% 0 0 1%;
 }
 section#principal
 {
     position: relative;
     background-color: rgb(178, 132, 221);
     padding: 40px;
-    border-radius: 0 3% 3% 0;
+    border-radius: 0 1% 1% 0;
 }
 code
 {

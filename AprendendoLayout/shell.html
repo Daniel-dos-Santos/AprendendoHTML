@@ -191,6 +191,57 @@
                     <p><b>ls *[0-9}*</b> - mostre arquivos e pastas que contém numeros.</p>
                     <p><b>tree</b> - mostre arquivos e pastas em uma arvore a partir da raiz (1).</p>
                     <p><b>lstree</b> - exibe arquivos e pastas em uma arvore a partir da raiz(2).</p>
+                    <p><b>mkdir dir1</b> - Cria uma pasta ou diretório com nome "dir1".</p>
+                    <p><b>mkdir dir1 dir2</b> - cria duas pastas ou diretórios simultaneamente (criando dois diretórios ao mesmo tempo).</p>
+                    <p><b>mkdir -p /tmp/dir1/dir2</b> - cria uma arvore de diretório.</p>
+                    <p><b>rm -f file1</b> - Exclui o arquivo chamado "file1".</p>
+                    <p><b>rmdir dir1</b> - exclui a pasta chamada "dir1".</p>
+                    <p><b>rmdir -rf dir1</b> - exclui a pasta chamada "dir1" com seu conteúdo recursivamente (Se exclí-lo recursivo significa com seu conteúdo).</p>
+                    <p><b>rmdir -rf dir1 dir2</b> - exclui duas pastas com seus conteúdos recursivamente.</p>
+                    <p><b>mv dir1 new_dir</b> - renomear ou mover um arquivo ou pasta (diretório).</p>
+                    <p><b>cp file1</b> - copia o arquivo.</p>
+                    <p><b>cp file1 file2</b> - copia os dois arquivos.</p>
+                    <p><b>cp dir/*</b> - copia todos os arquivos dentro do diretório de trabalho atual.</p>
+                    <p><b>cp -a /tmp/dir1.</b> - copia um diretório dentro do diretório de trabalho atual.</p>
+                    <p><b>cp -a dir1</b> - copia o diretório.</p>
+                    <p><b>cp -a dir1 dir2</b> - copia os dois diretórios.</p>
+                    <p><b>ln -s file1 lnk1</b> - cria um vinculo simbólico para o arquivo ou diretório.</p>
+                    <p><b>ln file1 lnk1</b> - cria um link físico para o arquivo ou diretório.</p>
+                    <p><b>touch -t MMDDhhmm file1</b> - modifica o tempo real de um arquivo ou diretório (M=mês, D=dia, h=hora, m=minuto).</p>
+                    <p><b>file file1</b> - saída (despejo na tela) do tipo mime de um arquivo de texto.</p>
+                    <p><b>iconv -l</b> - lista de cifras conhecidas.</p>
+                    <p><b>iconv -f fromEncoding -t toEncoding inputFIle > outputFile</b> - cria uma nova forma de arquivo de entrada assumindo que está codificado em fromEncoding e converte-lo pra toEncoding.</p>
+                    <p><b>find . -maxdepth 1 -name *.jpg –print -exec convert ”{}” -resize 80x60 “thumbs/{}” \;:</b> agrupando arquivos dimensaionados no diretório atual e enviá-los aos diretórios em visualização de miniaturas (requer o conversor do ImagemagicK).</p>
+                    <h3>ENcontrar arquivos</h3>                
+                    <p><b>find / -name file1</b> - busca de arquivo e diretório da raiz do sistema.</p>
+                    <p><b>find / -user user1</b> - encontre arquivos e diretórios pertencentes ao usuário "user1".</p>
+                    <p><b>find /home/user1 -name \*.bin</b> - procure arquivos com extensão '.bin' no diretório '/home/user1'.</p>
+                    <p><b>find /usr/bin -type f -atime +100</b> - pesquisar arquivos binários não utilizados nos ultimos 100 dias.</p>
+                    <p><b>find /usr/bin -type f -mtime -10</b> - pesquisar arquivos criados ou alterados nos ultimos 10 dias.</p>
+                    <p><b>find / -name \*.rpm -exec chmod 755 '{}' \;</b> - procura arquivos com extensão '.rpm' e modifica permissões.</p>
+                    <p><b>find / -xdev -name \*.rpm</b> - procura arquivos com extensão '.rpm' ignorando a mídia removivel, como CD-ROM, pendrive, etc...</p>
+                    <p><b>locate \*.ps</b> - encontrar arquivos com extensão '.ps' primeiro executando com o comando "updatedb".</p>
+                    <p><b>whereis halt</b> - mostra a localização do arquivo binário, a ajuda ou a fonte. Neste caso ele pergunta onde está o comando 'parada'.</p>
+                    <p><b>which halt</b> - mostra o caminho completo para um binério / executável.</p>
+                    <h4>Trabalhando com sistema de arquivos</h4>
+                    <p><b>mount /dev/hda2 /mnt/hda2</b> - monta um disco chamado hda2. Primeiro, verifique existencia do diretório '/mnt/hda2'; se não tiver, você deve cria-lo.</p>
+                    <p><b>umount /dev/hda2</b> - remove um disco chamado hda2. Em primeiro lugar, do ponto de '/mnt/hda2'.</p>
+                    <p><b>fuser -km /mnt/hda2</b> - força a remoção quando o dispositivo está ocupado.</p>
+                    <p><b>umount -n /mnt/hda2</b> - executa a remoção sem ler o arquivo /etc/MTAB. Útil quando o arquivo é somente leitura ou o disco rígido está cheio.</p>
+                    <p><b>mount /dev/fd0 /mnt/floppy</b> - monta um disco flexível (disquete).</p>
+                    <p><b>mount /dev/cdrom /mnt/cdrom</b> - monta um cdrom / dvdrom.</p>
+                    <p><b>mount /dev/hdc /mnt/cdrecorder</b> - monta um cd gravável ou um dvdrom.</p>
+                    <p><b>mount /dev/hdb /mnt/cdrecorder</b> - monta um cd gravável ou um dvdrom</p>
+                    <p><b>mount -o loop file.iso /mnt/hda5</b> - monte um sistema de imagem iso.</p>
+                    <p><b>mount -t vFAT /dev/hda5 mnt/hda5</b> - monte um sistema de arquivos FAT32.</p>
+                    <p><b>mount /dev/sda1 /mnt/usbdisk</b> - monte uma memória ou um pendrive usb (sem especificar o sistema de arquivos.</p>
+                    <h4>Espaço em disco</h4>
+                    <p><b>df -h</b> - mostre o tamanho dos arquivos e diretórios ordenados por tamanho.</p>
+                    <p><b>ls -lSr |more</b> - Estimar o espaço usado pelo diretório 'dir1'.</p>
+                    <p><b>du -sh dir1</b> - mostra o tamanho dos arquivos e diretórios ordenados pelo tamanho.</p>
+                    <p><b>du -sk * | sort -rn</b> - mostra o espaço usado por pacotes rpm instalados organizado pelo tamanho (Fedora, Red Hat e outros).</p>
+                    <p><b>rpm -q -a -qf '%10{SIZE}t%{NAME}n' | sort -k1,1n</b> - mostra o espaço usado por pacotes instalados, organizado pelo tamanho (Debian, Ubuntu e outros).</p>
+                    <p><b>dpkg-query -W -f='${Installed-Size;10}t${Package}n' | sort -k1,1n</b> - mostra (no Debian ou derivados) uma lista com 25 pacotes instalados que consomem mais espaço (em ordem decrescente).</p>
                 </article>
         </div>
         </section>
