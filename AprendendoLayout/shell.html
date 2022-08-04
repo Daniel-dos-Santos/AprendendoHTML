@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -242,9 +242,27 @@
                     <p><b>du -sk * | sort -rn</b> - mostra o espaço usado por pacotes rpm instalados organizado pelo tamanho (Fedora, Red Hat e outros).</p>
                     <p><b>rpm -q -a -qf '%10{SIZE}t%{NAME}n' | sort -k1,1n</b> - mostra o espaço usado por pacotes instalados, organizado pelo tamanho (Debian, Ubuntu e outros).</p>
                     <p><b>dpkg-query -W -f='${Installed-Size;10}t${Package}n' | sort -k1,1n</b> - mostra (no Debian ou derivados) uma lista com 25 pacotes instalados que consomem mais espaço (em ordem decrescente).</p>
+                    <h4>Usuários e grupos</h4>
+                    <p><b>groupadd nombre_do_grupo</b> - Cria um novo grupo.</p>
+                    <p><b>groupdel nome_do_grupo</b> - Exclui um grupo.</p>
+                    <p><b>groupmod -n novo_nome_do_grupo velho_nome_do_grupo</b> - renomear o grupo.</p>
+                    <p><b>useradd -c "Nome Sobrenome" -g admin -d /home/user1 -s /bin/bash user1</b> - cria um novo usuário "admin" para o grupo.</p>
+                    <p><b>useradd user1</b> cria um novo usuário.</p>
+                    <p><b>userdel -r user1</b> - excluir um usuário (-r elimina o diretório Home).</p>
+                    <p><b>usermod -c "User FTP" -g system -d /ftp/user1 -s /bin/nologin user1</b> - altera os atributos do usuário.</p>
+                    <p><b>passwd</b> - altere a senha.</p>
+                    <p><b>passwd user1</b> - Altera a senha do usuário (apenas pelo root).</p>
+                    <p><b>passwd -e YYYY-MM-DD user1</b> - define um limite de tempo para a snha do usuário.</p>
+                    <p><b>pwck</b> - verifique a sintaxe correta 'etc/passwd' arquivo, formato e a existencia do usuário.</p>
+                    <p><b>grpck</b> - verifique a sintaxe correta e formato do arquivo 'etc/grupo' e a existencia de grupos.</p>
+                    <p><b>newgrp nome_grupo</b> - registra um novo grupo para alterar o grupo padrão dos arquivos.</p>
+                    <h4>Permissões de Arquivos (+ Adiciona e - Remove permissões)</h4>
+                    <p><b>ls -lh</b> - mostra permissões.</p>
+                    <p><b>ls /tmp | pr -T5 -W$COLUMNS</b> - divide o teminal em 5 colunas.</p>
+                    <p><b>chmod ugo+rwx diretorio1</b> - definir permissões de leitura (r), gravar (w) e executar (x) para o dono (u), grupo (g) e outros (o) no diretório 'arquivo1'.</p>
                 </article>
+            </section>
         </div>
-        </section>
     </div>
 </body>
 </html>
