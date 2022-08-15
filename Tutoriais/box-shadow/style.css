@@ -1,0 +1,33 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-color: #131313;
+    position: relative;
+}
+.box
+{
+    box-shadow: rgb(3,3,222) 0px 0px 0px 2px
+    inset, rgb(255,255,255) 10px -10px 0px -3px,
+    rgb(12,224,9) 10px -10px, rgb(255,255,255)
+    20px -20px 0px -3px, rgb(227,190,3) 20px -20px,
+    rgb(255,255,255) 30px -30px 0px -3px,
+    rgb(255,156,85) 30px -30px,rgb(255,255,255)
+    40px -40px 0px -3px, rgb(231,8,8) 40px -40px;
+    width: 500px;
+    height: 500px;
+    display: grid;
+    place-items: center;
+    font-size: 18px;
+}
+li
+{
+    color: #fff;
+}
