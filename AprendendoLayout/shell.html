@@ -61,6 +61,43 @@
                     <code class="box">[usuario@seuusuario ~]$ timedatectl status</code>
                     <p>Definindo manualmente um horário para o sistema:</p>
                     <code class="box">[usuario@seuusuario ~]$ sudo timedatectl set-time "AAAA-MM-DD HH:MM:SS"</code>
+                    <h4>Compactar e descompactar arquivos .tar.gz</h4>
+                    <p>Esse é o método de compactação gzip (.gz), não consome tanto processamento e tem um fator de compressão muito bom. Para compactar/descompactar arquivos .tar.gz, siga as instruções abaixo:</p>
+                    <p>compactar</p>
+                    <code class="box">tar -zcvf compactada.tar.gz pasta/</code>
+                    <p>descompactar</p>
+                    <code class="box">tar -zxvf compactada.tar.gz</code>
+                    <p>listar</p>
+                    <code class="box">tar -ztvf compactada.tar.gz</code>
+                    <p>compactar separadamente</p>
+                    <code class="box">tar -zcvf compactada.tar.gz pasta/arquivos-{1,2}.txt outra-coisa/</code>
+                    <p>Descompactar para pasta</p>
+                    <code class="box">tar -zxvf compactada.tar.gz -C caminho/da/pasta/</code>
+                    <h4>Compactar de descompactar arquivos .tar.bz2</h4>
+                    <p>Este é o bzip2, apesar de utilizar mais recursos do computador, tem um fator de compressão excelente. Para compactar/descompactar arquivos .tar.bz2, siga as instruções abaixo:</p>
+                    <p>compactar</p>
+                    <code class="box">tar -jcvf campactada.tar.bz2 pasta/</code>
+                    <p>descompactar</p>
+                    <code class="box">tar -jxvf compactada.tar.bz2</code>
+                    <p>listar</p>
+                    <code class="box">tar -jtvf compactada.tar.bz2</code>
+                    <p>compactar separadamente</p>
+                    <code class="box">tar -jcvf compactada.tar.bz2 pasta/arquivo-{1,2}.txt</code>
+                    <p>descompactar para pasta</p>
+                    <code class="box">tar -jxvf compactada.tar.bz2 -C caminho/</code>
+                    <h4>Compactar e descompactar arquivos .zip</h4>
+                    <p>compactar</p>
+                    <code class="box">zip -r compactada.zip pasta/</code>
+                    <p>descompactar</p>
+                    <code class="box">unzip compactada.zip</code>
+                    <p>listar</p>
+                    <code class="box">unzip -l compactada.zip</code>
+                    <p>compactar separadamente</p>
+                    <code class="box">zip compactada.zup pasta/arquivo-{1,2,3}.txt</code>
+                    <p>descompactar para pasta</p>
+                    <code class="box">unzip compactada.zip -d caminho/</code>
+                    <p>compactar com senha</p>
+                    <code class="box">zip -P senha -r compactada.zip pasta/</code>
                 </article>
             </aside>
             <section id="principal">
@@ -103,19 +140,12 @@
                     <p><b>bg</b> - lista trabalhos parados ou em segundo plano ou pode continua-los também.</p>
                     <p><b>fg</b> - traz o trabalho mais recente para o primeiro plano.</p>
                     <p><b>fg trab</b> - traz o trabalho "trab" para o primeiro plano (substituir trab pelo nome do processo).</p>
-                    <p><b>chmod octal arq</b> - muda as permissões do arquivo "arq" para octal, que pode ser especificada separadamente para "usuário", "grupo" e "outros". Os valores em octal são representados abaixo:</p>
-                    <ul>
-                        <li>4 - leitura (r, de read)</li>
-                        <li>2 - gravação (w, de write)</li>
-                        <li>1 - execução (x, de execute)</li>
-                    </ul>
+                    <p><b>chmod octal arq</b> - muda as permissões do arquivo "arq" para octal, que pode ser especificada separadamente para "usuário", "grupo" e "outros". Os valores em octal são representados abaixo:<br>4 - leitura (r, de read)<br>2 - gravação (w, de write)<br>1 - execução (x, de execute)</p>
+                
                     <p>Explanação: Para de finir permissões, somam-se os valores acima. Por exemplo, para atribuir ao dono do arquivo ("usuário") acesso total de leitura (r), gravação (w) e execução (x), basta somar o valor octal 4 + 2 + 1 = 7. SUpondo que você queira limitar o acesso para membros do "grupo", permitindo apenas a leitura e gravação, basta somar  4 + 2 = 6. Reunindo os dois exemplos citados, ficaria: chmod 760 (r para usuario, w para grupo e 0 para outros ou "rw-".</p>
                     <h3>Outros exemplos</h3>
-                    <ul>
-                        <li><b>chmod 777:</b> leitura (r), gravação (w) e execução (x) para todos ("usuário", "grupo" e "outros")</li>
-                        <li><b>chmod 755:</b> "rwx" para o "dono" (usuário"), "rw" para o "grupo" e "outros"</li>
-                        <q>Para mais informações, digite no terminal: <b>man chmod</b></q>
-                    </ul>
+                    <p><b>chmod 777:</b> leitura (r), gravação (w) e execução (x) para todos ("usuário", "grupo" e "outros")<br><b>chmod 755:</b> "rwx" para o "dono" (usuário"), "rw" para o "grupo" e "outros"<br><q>Para mais informações, digite no terminal: <b>man chmod</b></q>
+                    <p>
                     <p><b>ssh usuário@host:</b> - conecta ao host como usuário (exemplo: ssh computeiro@meuservidor).</p>
                     <p><b>ssh -p porta usuário@host:</b> - conecta ao host na porta especificada (substituir "porta" pelo numero da porta configurada).</p>
                     <p><b>ssh-copy-id usuário@host</b> - adiciona sua chave para o host e usuário daquele host; serve para ativar logins sem senha com uso de chaves.</p>
